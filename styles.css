@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,7 @@ body {
 
 h1 {
     color: #ff69b4;
+    font-family: 'Brush Script MT', cursive;
     margin-bottom: 10px;
 }
 
@@ -32,4 +33,33 @@ p {
     width: 200px;
     height: 200px;
     margin: 0 auto;
+}
+
+#left-eye, #right-eye {
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    0%, 90%, 100% {
+        r: 3;
+    }
+    95% {
+        r: 1;
+    }
+}
+
+#beak {
+    animation: kiss 2s infinite;
+}
+
+@keyframes kiss {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(5px);
+    }
 }
