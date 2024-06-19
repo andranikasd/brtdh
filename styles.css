@@ -35,10 +35,6 @@ p {
     margin: 0 auto;
 }
 
-#left-eye, #right-eye {
-    animation: blink 5s infinite;
-}
-
 @keyframes blink {
     0%, 90%, 100% {
         r: 3;
@@ -46,10 +42,6 @@ p {
     95% {
         r: 1;
     }
-}
-
-#beak {
-    animation: kiss 2s infinite;
 }
 
 @keyframes kiss {
@@ -62,4 +54,12 @@ p {
     75% {
         transform: translateY(5px);
     }
+}
+
+#left-eye, #right-eye {
+    animation: blink 5s infinite;
+}
+
+#beak {
+    animation: kiss 2s infinite;
 }
