@@ -17,6 +17,7 @@ body {
     padding: 20px;
     width: 90%;
     max-width: 350px;
+    position: relative;
 }
 
 h1 {
@@ -217,4 +218,73 @@ p {
 
 .penguin * {
     position: absolute;
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: fly 5s infinite;
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+#heart1 {
+    left: 50%;
+    animation-delay: 0s;
+}
+
+#heart2 {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+#heart3 {
+    left: 60%;
+    animation-delay: 2s;
+}
+
+@keyframes fly {
+    0% {
+        bottom: 20px;
+        opacity: 0;
+        transform: rotate(45deg) translateX(0);
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+        transform: rotate(45deg) translateX(50px);
+    }
 }
