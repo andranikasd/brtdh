@@ -281,23 +281,23 @@ p {
 }
 
 #heart2 {
-    left: 55%;
-    animation-delay: 1s;
+    left: 52%;
+    animation-delay: 0.5s;
 }
 
 #heart3 {
-    left: 60%;
-    animation-delay: 2s;
+    left: 48%;
+    animation-delay: 1s;
 }
 
 #heart4 {
-    left: 45%;
+    left: 54%;
     animation-delay: 1.5s;
 }
 
 #heart5 {
-    left: 65%;
-    animation-delay: 2.5s;
+    left: 46%;
+    animation-delay: 2s;
 }
 
 .iceberg {
@@ -330,6 +330,29 @@ p {
     100% {
         transform: translateX(0);
     }
+}
+
+.fish::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+}
+
+.fish::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: orange;
+    border-radius: 50%;
+    top: -4px;
+    left: 15px;
+    transform: rotate(45deg);
 }
 
 #fish1 {
