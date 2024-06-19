@@ -237,6 +237,7 @@ p {
     background-color: red;
     transform: rotate(45deg);
     animation: fly 5s infinite;
+    opacity: 0;
 }
 
 .heart::before, .heart::after {
@@ -258,6 +259,22 @@ p {
     top: 0;
 }
 
+@keyframes fly {
+    0% {
+        bottom: 20px;
+        opacity: 0;
+        transform: rotate(45deg) translateX(0);
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+        transform: rotate(45deg) translateX(50px);
+    }
+}
+
 #heart1 {
     left: 50%;
     animation-delay: 0s;
@@ -273,18 +290,56 @@ p {
     animation-delay: 2s;
 }
 
-@keyframes fly {
+#heart4 {
+    left: 45%;
+    animation-delay: 1.5s;
+}
+
+#heart5 {
+    left: 65%;
+    animation-delay: 2.5s;
+}
+
+.iceberg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50px;
+    background: #e0f7fa;
+    border-radius: 50% 50% 0 0;
+}
+
+.fish {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    animation: swim 3s infinite;
+}
+
+@keyframes swim {
     0% {
-        bottom: 20px;
-        opacity: 0;
-        transform: rotate(45deg) translateX(0);
+        transform: translateX(0);
     }
-    25% {
-        opacity: 1;
+    50% {
+        transform: translateX(30px);
     }
     100% {
-        bottom: 100%;
-        opacity: 0;
-        transform: rotate(45deg) translateX(50px);
+        transform: translateX(0);
     }
+}
+
+#fish1 {
+    bottom: 10px;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+#fish2 {
+    bottom: 10px;
+    right: 30%;
+    animation-delay: 1s;
 }
